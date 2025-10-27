@@ -1,0 +1,33 @@
+/* Import custom fonts */
+@import './assets/fonts/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Default font for English */
+  body {
+    font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Hindi Font - Applied to <html> element, overrides EVERYTHING */
+@layer utilities {
+  html.font-hindi,
+  html.font-hindi *,
+  html.font-hindi *::before,
+  html.font-hindi *::after {
+    font-family: 'Noto Sans Devanagari', 'Instrument Sans', system-ui, -apple-system, sans-serif !important;
+  }
+}
+
+/* Custom scrollbar utilities */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
