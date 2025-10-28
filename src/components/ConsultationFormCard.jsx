@@ -15,8 +15,8 @@ const ConsultationFormCard = ({ onSubmit }) => {
         e.preventDefault();
         setStatus({ error: "", success: "" });
 
-        // Simple validation (accepts +91 1234567890 style or 10–15 digits)
-        const phoneOk = /^\+?\d[\d\s-]{9,14}$/.test(phone.trim());
+        // Validate phone number (10 digits)
+        const phoneOk = /^\d{10}$/.test(phone.trim());
         if (name.trim().length < 2) {
             return setStatus({ error: t.nameError[language], success: "" });
         }
@@ -36,7 +36,7 @@ const ConsultationFormCard = ({ onSubmit }) => {
                 body: JSON.stringify({
                     data: {
                         Name: name.trim(),
-                        "Phone Number": phone.trim(),
+                        "Phone Number": "+91" + phone.trim(),
                         Placement: "Middle"
                     }
                 })
@@ -108,13 +108,25 @@ const ConsultationFormCard = ({ onSubmit }) => {
                         <label className="block text-left mt-4 text-sm font-medium text-[#414651] font-pangram">
                             {t.phoneLabel[language]}
                         </label>
-                        <input
-                            type="tel"
-                            value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
-                            placeholder={t.phonePlaceholder[language]}
-                            className="mt-2 w-full rounded-lg border border-[#D5D7DA] px-4 py-3 text-sm outline-none "
-                        />
+                        
+                        <div className="mt-2 flex bg-white border border-[#D5D7DA] rounded-lg">
+                            <div className="flex items-center pl-4 pr-2">
+                                <span className="text-gray-900 font-normal">+91</span>
+                            </div>
+                            <input
+                                type="tel"
+                                value={phone}
+                                onChange={(e) => {
+                                    const value = e.target.value.replace(/\D/g, '');
+                                    if (value.length <= 10) {
+                                        setPhone(value);
+                                    }
+                                }}
+                                placeholder="1234567890"
+                                maxLength="10"
+                                className="flex-1 rounded-r-lg px-2 py-3 text-sm outline-none"
+                            />
+                        </div>
 
                         {/* Messages */}
                         {status.error ? (

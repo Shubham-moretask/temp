@@ -639,5 +639,11 @@ export const translations = {
       English: 'Contact',
       हिंदी: 'संपर्क'
     }
+  },
+  floatingButton: {
+    bookAppointment: {
+      English: 'Book an Appointment',
+      हिंदी: 'परामर्श बुक करें'
+    }
   }
 };

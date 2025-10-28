@@ -82,11 +82,11 @@ const AyurvedicIngredientsSection = () => {
           {ingredients.map((ingredient, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-2xl shadow-lg   overflow-hidden md:overflow-visible  flex flex-col  max-w-full "
+              className="relative bg-white rounded-2xl    overflow-hidden md:overflow-visible  flex flex-col  max-w-full "
             >
               {/* Ingredient Image - Responsive positioning */}
-              {/* Mobile: Bottom center, Desktop: Top right */}
-              <div className="absolute bottom-2  left-1/2 transform -translate-x-1/2 w-40 h-28 md:top-[-44px] md:right-[-22px] md:left-auto md:bottom-auto md:transform-none md:w-40 md:h-28 z-50  ">
+              {/* Mobile: Bottom left, Desktop: Top right */}
+              <div className="absolute bottom-2 left-2 w-40 h-28 md:top-[-44px] md:right-[-22px] md:left-auto md:bottom-auto md:transform-none md:w-40 md:h-28 z-50">
                 <img
                   src={ingredient.image}
                   alt={ingredient.name}
@@ -95,7 +95,7 @@ const AyurvedicIngredientsSection = () => {
               </div>
 
               {/* Content - Positioned on left side */}
-              <div className="p-6 py-16 md:py-12 flex flex-col justify-center flex-grow relative z-20">
+              <div className="p-6 pb-16 md:py-12 flex flex-col justify-center flex-grow relative z-20">
                 <div className="max-w-full ">
                   <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-3 leading-tight">
                     {ingredient.name}

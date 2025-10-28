@@ -97,7 +97,12 @@ const HeroSection = () => {
                       <input
                         type="tel"
                         value={phoneNumber}
-                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(/\D/g, '');
+                          if (value.length <= 10) {
+                            setPhoneNumber(value);
+                          }
+                        }}
                         placeholder="1234567890"
                         maxLength="10"
                         className="flex-1 font-normal text-sm md:text-base leading-5 md:leading-6 text-gray-500 bg-transparent border-none outline-none min-w-0"

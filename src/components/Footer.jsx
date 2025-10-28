@@ -18,10 +18,10 @@ const Footer = () => {
     e.preventDefault();
     setStatus({ error: "", success: "" });
 
-    // Validate phone number
-    const phoneOk = /^\+?\d[\d\s-]{9,14}$/.test(phone.trim());
+    // Validate phone number (10 digits)
+    const phoneOk = /^\d{10}$/.test(phone.trim());
     if (!phoneOk) {
-      return setStatus({ error: "Please enter a valid phone number.", success: "" });
+      return setStatus({ error: "Please enter a valid 10-digit phone number.", success: "" });
     }
 
     try {
@@ -36,7 +36,7 @@ const Footer = () => {
         body: JSON.stringify({
           data: {
             Name: "",
-            "Phone Number": phone.trim(),
+            "Phone Number": "+91" + phone.trim(),
             Placement: "Footer"
           }
         })
@@ -92,15 +92,26 @@ const Footer = () => {
                 >
                   {t.newsletter[language]}
                 </label>
-                <input
-                  id="footer-phone"
-                  name="phone"
-                  type="tel"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  placeholder="+91 1234567890"
-                  className="w-full py-3 px-4 rounded-md bg-white text-[#0A2E1A] placeholder:text-[#7C8A80] shadow-inner outline-none focus:ring-2 focus:ring-white/70 h-[48px]"
-                />
+                <div className="flex bg-white rounded-md h-[48px] ">
+                  <div className="flex items-center pl-4 pr-2">
+                    <span className="text-[#0A2E1A] font-normal">+91</span>
+                  </div>
+                  <input
+                    id="footer-phone"
+                    name="phone"
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => {
+                      const value = e.target.value.replace(/\D/g, '');
+                      if (value.length <= 10) {
+                        setPhone(value);
+                      }
+                    }}
+                    placeholder="1234567890"
+                    maxLength="10"
+                    className="flex-1 py-3 px-2 rounded-r-md bg-white text-[#0A2E1A] placeholder:text-[#7C8A80] outline-none"
+                  />
+                </div>
                 {status.error && (
                   <div className="mt-1 text-xs text-red-300">{status.error}</div>
                 )}

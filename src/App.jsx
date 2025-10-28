@@ -1,5 +1,6 @@
 import React from 'react'
 import { LanguageProvider, useLanguage } from './context/LanguageContext'
+import { translations } from './utils/translations'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import ProductSection from './components/ProductSection'
@@ -14,11 +15,11 @@ import TestimonialsSection from './components/TestimonialsSection'
 import PrakrityaBetter from './components/PrakrityaBetter'
 import HowToUse from './components/HowToUse'
 import WhyChoose from './components/WhyChoose'
-
 function AppContent() {
   const { language } = useLanguage();
   const [showFloatingButton, setShowFloatingButton] = React.useState(true);
-
+  const t = translations.floatingButton;
+  
   const handleWhatsAppClick = () => {
     // Replace with your WhatsApp number (without + or special characters)
     const phoneNumber = '9910931272'; // Example: 919999999999 for +91 9999999999
@@ -158,7 +159,7 @@ function AppContent() {
                 className="w-full bg-[#074720] text-white py-2.5 px-3.5 rounded-lg text-base font-medium hover:brightness-110 active:brightness-95 disabled:opacity-70"
                 aria-label="Book an appointment"
               >
-                <span className="text-lg">Book an Appointment</span>
+                <span className="text-lg">{t.bookAppointment[language]}</span>
               </button>
             </div>
           </div>

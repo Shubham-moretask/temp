@@ -199,16 +199,15 @@ const TrustAyurvedaSection = () => {
   };
 
   return (
-    <section className="relative max-w-full min-h-[400px] md:min-h-[500px] bg-[#1E1E1E] overflow-hidden">
+    <section className="relative max-w-full min-h-[600px] md:min-h-[500px] bg-[#1E1E1E] overflow-hidden">
       {/* Background Video - Positioned to the right on desktop, bottom on mobile */}
-      <div className="absolute inset-0 md:left-64">
+      <div className="absolute bottom-0 left-0 right-0 h-[60%] md:inset-0 md:left-64 md:h-full">
         <video
           autoPlay
           muted
           loop
-          zoom
           playsInline
-          className="absolute inset-0 w-full h-full object-cover md:object-cover object-bottom"
+          className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
           onError={handleVideoError}
           onLoadedData={handleVideoLoad}
           style={{ display: 'block' }}
@@ -218,11 +217,11 @@ const TrustAyurvedaSection = () => {
         </video>
       </div>
 
-      {/* Mobile Gradient Overlay - Top to bottom */}
+      {/* Mobile Gradient Overlay - Top to bottom, stronger gradient */}
       <div 
         className="md:hidden absolute inset-0 z-10" 
         style={{
-          background: 'linear-gradient(180deg, #1E1E1E 40%, rgba(30, 30, 30, 0.00) 100%)'
+          background: 'linear-gradient(180deg, #1E1E1E 0%, #1E1E1E 40%, rgba(30, 30, 30, 0.00) 65%, rgba(30, 30, 30, 0.00) 100%)'
         }}
       />
       
@@ -235,21 +234,21 @@ const TrustAyurvedaSection = () => {
       />
 
       {/* Content Container */}
-      <div className="relative z-20 flex items-center justify-start h-full min-h-[400px] md:min-h-[500px] px-4 md:px-0 md:mx-20">
-        <div className="max-w-sm md:max-w-md lg:max-w-lg">
+      <div className="relative z-20 flex items-start md:items-center justify-start h-full min-h-[600px] md:min-h-[500px] px-6 md:px-0 md:mx-20 my-12 md:my-0">
+        <div className="max-w-[340px] md:max-w-md lg:max-w-lg">
           {/* Main Heading */}
-          <div className="space-y-4 md:space-y-6">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight whitespace-pre-line ">
+          <div className="space-y-3 md:space-y-6">
+            <h2 className="text-[32px] md:text-4xl lg:text-5xl font-bold text-white leading-[1.2] md:leading-tight whitespace-pre-line">
               {t.title[language]}
             </h2> 
             
             {/* Description */}
-            <p className="text-lg text-gray-200 leading-relaxed md:whitespace-pre-line font-pangram">
+            <p className="text-base md:text-lg text-gray-200 leading-relaxed md:whitespace-pre-line font-pangram">
               {t.subtitle[language]}
             </p>
             
             {/* CTA Button */}
-            <div className="pt-4 md:pt-6">
+            <div className="pt-2 md:pt-6 hidden md:block">
               <button
                 onClick={handleBookConsultation}
                 className="font-pangram bg-[#AFD455] hover:bg-lime-500 text-gray-900 font-semibold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:ring-offset-2 focus:ring-offset-gray-900"

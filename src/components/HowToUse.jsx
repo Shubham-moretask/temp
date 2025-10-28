@@ -248,7 +248,7 @@ const HowToUse = () => {
         {/* Horizontal scroll section */}
         <div
           ref={scrollerRef}
-          className="flex gap-6 overflow-x-hidden scroll-smooth snap-x snap-mandatory pb-2"
+          className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory pb-2"
         >
           {steps.map((s, i) => (
             <article

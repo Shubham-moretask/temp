@@ -41,7 +41,7 @@ const ComboPackSection = () => {
   };
 
   return (
-    <div className="py-16 bg-white">
+    <div className="py-16  bg-white">
       <div className="max-w-full px-4 md:px-0 md:mx-20">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
           {/* Left Content */}
