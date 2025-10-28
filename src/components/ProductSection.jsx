@@ -171,12 +171,15 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
-
+import productImage1 from '../assets/first.png';
+import productImage2 from '../assets/second.png';
+import productImage3 from '../assets/third.png';
+import productImage4 from '../assets/fourth.png';
 // Import product images
-const productImage1 = '/src/assets/d4f9d7594b36a5f7b678518d6df5059adb905a28.png';
-const productImage2 = '/src/assets/ae79ce6b046e3c2bc83ff542c553db10af54629a.png';
-const productImage3 = '/src/assets/3a030033e12bc6bcf63ecf66d1dad867faef3517.png';
-const productImage4 = '/src/assets/06a95442231f12f37f4724880158e07e52854e8f.png';
+// const productImage1 = '/src/assets/d4f9d7594b36a5f7b678518d6df5059adb905a28.png';
+// const productImage2 = '/src/assets/ae79ce6b046e3c2bc83ff542c553db10af54629a.png';
+// const productImage3 = '/src/assets/3a030033e12bc6bcf63ecf66d1dad867faef3517.png';
+// const productImage4 = '/src/assets/06a95442231f12f37f4724880158e07e52854e8f.png';
 
 const ProductSection = () => {
   const { language } = useLanguage();
