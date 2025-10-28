@@ -22,7 +22,7 @@ function AppContent() {
   
   const handleWhatsAppClick = () => {
     // Replace with your WhatsApp number (without + or special characters)
-    const phoneNumber = '9910931272'; // Example: 919999999999 for +91 9999999999
+    const phoneNumber = '+919910931272'; // Example: 919999999999 for +91 9999999999
     const message = encodeURIComponent('Hello, I am interested in your Ayurvedic hair care products.');
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
