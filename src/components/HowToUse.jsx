@@ -94,7 +94,7 @@
 //                 />
 //               </div>
 
-          
+
 //             </article>
 //           ))}
 //         </div>
@@ -254,19 +254,19 @@ const HowToUse = () => {
             <article
               key={i}
               data-card
-              className="relative min-w-[300px] sm:min-w-[320px] md:min-w-[350px] lg:w-full h-[504px] rounded-2xl overflow-hidden flex flex-col justify-end p-5 snap-start"
+              className="relative min-w-[300px] sm:min-w-[320px] md:min-w-[380px] lg:w-full h-[504px] rounded-2xl overflow-hidden flex flex-col justify-end p-5 snap-start"
             >
               {/* Background Images */}
               <div className="absolute inset-0 pointer-events-none">
                 {s.backgroundImg && (
-                  <img 
-                    src={s.backgroundImg} 
+                  <img
+                    src={s.backgroundImg}
                     alt=""
                     className="absolute inset-0 w-full h-full object-cover rounded-2xl"
                   />
                 )}
-                <img 
-                  src={s.img} 
+                <img
+                  src={s.img}
                   alt={s.title}
                   className={`absolute inset-0 w-full h-full rounded-2xl ${s.imgStyle}`}
                 />
@@ -281,6 +281,10 @@ const HowToUse = () => {
                   {s.desc}
                 </p>
               </div>
+
+
+
+
             </article>
           ))}
         </div>
