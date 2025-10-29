@@ -238,7 +238,7 @@ const TrustAyurvedaSection = () => {
         <div className="max-w-[340px] md:max-w-md lg:max-w-lg">
           {/* Main Heading */}
           <div className="space-y-3 md:space-y-6">
-            <h2 className="text-[32px] md:text-4xl lg:text-5xl font-bold text-white leading-[1.2] md:leading-tight whitespace-pre-line">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.2] md:leading-tight whitespace-pre-line">
               {t.title[language]}
             </h2> 
             

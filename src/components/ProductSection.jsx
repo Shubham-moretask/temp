@@ -227,8 +227,8 @@ const ProductSection = () => {
       <div className="max-w-full px-4 md:px-0 md:mx-20">
         {/* Section Header */}
         <div className="text-left md:text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-5 tracking-tight leading-tight">
-            {t.sectionTitle[language]}
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5 tracking-tight leading-tight">
+            {t.sectionTitle[language]} 
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-8 font-pangram">
             {t.sectionSubtitle[language]}
