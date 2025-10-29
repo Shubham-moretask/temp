@@ -266,7 +266,7 @@ const HeroSection = () => {
                         +91
                       </span>
                     </div>
-                    <div className="flex-1 flex gap-1 md:gap-2 items-center min-w-0 pl-1 md:pl-2 pr-2.5 md:pr-3.5 py-2 md:py-2.5">
+                    <div className="flex-1 flex gap-1 md:gap-2 items-center min-w-0 pl-1 md:pl-2 pr-2.5 md:pr-3.5 py-2.5">
                       <input
                         type="tel"
                         value={phoneNumber}
@@ -286,7 +286,7 @@ const HeroSection = () => {
                     onClick={handleConsultation}
                     id="hero-consultation-cta"
                     disabled={loading}
-                    className="bg-[#AFD455]  border-opacity-12 flex gap-1 md:gap-1.5 items-center justify-center overflow-hidden px-3 py-2 md:px-4 md:py-3 rounded-md md:rounded-lg text-gray-900 font-medium text-sm md:text-base leading-5 md:leading-6 hover:bg-lime-500 transition-colors whitespace-nowrap disabled:opacity-70"
+                    className="bg-[#AFD455]  border-opacity-12 flex gap-1 md:gap-1.5 items-center justify-center overflow-hidden px-3 py-3 md:px-4  rounded-md md:rounded-lg text-gray-900 font-medium text-sm md:text-base leading-5 md:leading-6 hover:bg-lime-500 transition-colors whitespace-nowrap disabled:opacity-70"
                   >
                     <span className="block sm:hidden">{loading ? t.booking[language] : t.ctaButton[language]}</span>
                     <span className="hidden sm:block">{loading ? t.booking[language] : t.ctaButton[language]}</span>
