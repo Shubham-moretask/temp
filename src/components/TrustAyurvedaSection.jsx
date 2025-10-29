@@ -243,7 +243,7 @@ const TrustAyurvedaSection = () => {
             </h2> 
             
             {/* Description */}
-            <p className="text-base md:text-lg text-gray-200 leading-relaxed md:whitespace-pre-line font-pangram">
+            <p className="text-lg text-gray-200 leading-relaxed md:whitespace-pre-line font-pangram">
               {t.subtitle[language]}
             </p>
             

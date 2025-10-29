@@ -86,7 +86,7 @@ const HeroSection = () => {
                   {t.title[language]}
                 </h1>
               </div>
-              <p className="font-normal font-pangram text-lg leading-6 md:leading-8 text-white w-full  md:whitespace-pre-line">
+              <p className="font-normal font-pangram  text-base md:text-lg leading-6 md:leading-8 text-white w-full  md:whitespace-pre-line">
                 {t.subtitle[language]}
               </p>
             </div>

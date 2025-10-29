@@ -230,7 +230,7 @@ const ProductSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5 tracking-tight leading-tight">
             {t.sectionTitle[language]} 
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-8 font-pangram">
+          <p className=" text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-8 font-pangram">
             {t.sectionSubtitle[language]}
           </p>
         </div>
