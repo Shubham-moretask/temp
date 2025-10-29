@@ -61,14 +61,22 @@ function AppContent() {
 
 
 
-  // Check if consultation form or footer is in viewport
+  // Check if hero section, consultation form or footer is in viewport
   React.useEffect(() => {
     const checkVisibility = () => {
+      const heroSection = document.querySelector('section'); // First section is hero section
       const consultationSection = document.getElementById('consultation-form');
       const footer = document.querySelector('footer');
       
       const windowHeight = window.innerHeight;
       let shouldHideButton = false;
+
+      // Check if hero section is visible
+      if (heroSection) {
+        const heroRect = heroSection.getBoundingClientRect();
+        const isHeroVisible = heroRect.top < windowHeight && heroRect.bottom > 0;
+        if (isHeroVisible) shouldHideButton = true;
+      }
 
       // Check if consultation form is visible
       if (consultationSection) {
@@ -84,7 +92,7 @@ function AppContent() {
         if (isFooterVisible) shouldHideButton = true;
       }
       
-      // Hide button when form or footer is visible, show when scrolled away
+      // Hide button when hero section, form or footer is visible, show when scrolled away
       setShowFloatingButton(!shouldHideButton);
     };
 
@@ -157,7 +165,7 @@ function AppContent() {
               <button
                 onClick={handleBookAppointment}
                 className="w-full bg-[#074720] text-white py-2.5 px-3.5 rounded-lg text-base font-medium hover:brightness-110 active:brightness-95 disabled:opacity-70"
-                aria-label="Book an appointment"
+                aria-label="Book a Consultation"
               >
                 <span className="text-lg">{t.bookAppointment[language]}</span>
               </button>

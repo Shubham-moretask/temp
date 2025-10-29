@@ -66,7 +66,7 @@ const AyurvedicIngredientsSection = () => {
   ]
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-[#F9F6F1]">
       <div className="max-w-full mx-auto px-4 md:px-0 md:mx-20  ">
         {/* Section Header */}
         <div className="text-left  mb-16">

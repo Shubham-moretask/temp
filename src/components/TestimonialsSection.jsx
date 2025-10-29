@@ -49,7 +49,7 @@ const TestimonialsSection = () => {
     ];
 
     return (
-        <section className=" py-16 ">   {/** px-4 md:px-28 lg:px-24" */}
+        <section className=" py-16 bg-white ">   {/** px-4 md:px-28 lg:px-24" */}
             <div className="max-w-full  px-4 md:px-0 md:mx-20 ">
                 {/* Section title */}
                 <h2 className="text-left md:text-center text-3xl md:text-4xl font-bold text-[#181D27] mb-16">

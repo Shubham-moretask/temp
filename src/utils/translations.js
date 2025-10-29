@@ -94,7 +94,7 @@ export const translations = {
       }
     },
     cta: {
-      English: 'Request a Call Back',
+      English: 'Book a Consultation',
       हिंदी: 'परामर्श बुक करें'
     }
   },
@@ -642,7 +642,7 @@ export const translations = {
   },
   floatingButton: {
     bookAppointment: {
-      English: 'Book an Appointment',
+      English: 'Book a Consultation',
       हिंदी: 'परामर्श बुक करें'
     }
   }

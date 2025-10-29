@@ -8,7 +8,7 @@ const RealResultsSection = () => {
   const t = translations.realResults;
   
   return (
-    <section className="">
+    <section className="bg-[#F9F6F1]">
       <div className="max-w-full px-4 md:px-0 md:ml-20">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
           {/* Left Content */}

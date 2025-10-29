@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
 import heroBackground from '../assets/bg.png';
+import mobileBackground from '../assets/Mobile-bg.png';
 import productImage from '../assets/Medicine.png';
 
 const HeroSection = () => {
@@ -54,9 +55,9 @@ const HeroSection = () => {
 
   return (
     <section className="relative max-h-full max-w-full bg-gray-50 flex flex-col items-center">
-      {/* Background Image */}
+      {/* Background Image - Desktop */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
         style={{
           backgroundImage: `url(${heroBackground})`,
         }}
@@ -64,8 +65,18 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black bg-opacity-20" />
       </div>
 
+      {/* Background Image - Mobile */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat block md:hidden"
+        style={{
+          backgroundImage: `url(${mobileBackground})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-20" />
+      </div>
+
       {/* Content */}
-      <div className="relative  z-10 flex flex-col lg:flex-row gap-6 md:gap-8 items-center justify-center pb-12 md:pb-24 pt-8 md:pt-16 px-4 md:px-0 w-full">
+      <div className="relative  z-10 flex flex-col lg:flex-row gap-6 md:gap-8 items-center justify-center pb-12 md:pb-24 pt-16  px-4 md:px-0 w-full">
         <div className="flex md:mx-28 flex-col lg:flex-row gap-6 lg:gap-16 items-center justify-center max-w-full  py-0 w-full">
           {/* Left Content */}
           <div className="flex-1 flex flex-col gap-4 md:gap-8 items-start min-w-0 text-center lg:text-left">
@@ -137,7 +148,7 @@ const HeroSection = () => {
 
               className="
                 absolute 
-                bottom-[-25px] sm:bottom-[-140px] xl:bottom-[-85px] lg:bottom-[-40px]
+                bottom-[-45px] sm:bottom-[-140px] xl:bottom-[-85px] lg:bottom-[-40px]
                 right-0 left-0 mx-auto
                 h-auto w-auto max-w-full
                 object-contain drop-shadow-2xl
