@@ -223,7 +223,7 @@ const ProductSection = () => {
   ];
 
   return (
-    <section className="pt-16 bg-white">
+    <section className=" pt-8 md:pt-16 bg-white">
       <div className="max-w-full px-4 md:px-0 md:mx-20">
         {/* Section Header */}
         <div className="text-left md:text-center mb-16">

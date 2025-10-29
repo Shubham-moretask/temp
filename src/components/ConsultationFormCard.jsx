@@ -62,14 +62,14 @@ const ConsultationFormCard = ({ onSubmit }) => {
     };
 
     return (
-        <section id="consultation-form" className="bg-[#F9F6F1] py-16 px-6">
+        <section id="consultation-form" className="bg-[#F9F6F1] py-8 md:py-16 px-6">
             <div className="max-w-full text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#181D27]">
                     {t.title[language]}
                 </h2>
 
                 {/* Card */}
-                <div className="mt-16 mx-auto max-w-lg rounded-xl shadow-md border border-black/5 bg-white">
+                <div className=" mt-12 md:mt-16 mx-auto max-w-lg rounded-xl shadow-md border border-black/5 bg-white">
                     <form onSubmit={handleSubmit} className="p-8 md:p-8 rounded-lg">
                         {/* Brand line */}
                         <div className="">

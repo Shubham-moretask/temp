@@ -49,15 +49,15 @@ const TestimonialsSection = () => {
     ];
 
     return (
-        <section className=" py-16 bg-white ">   {/** px-4 md:px-28 lg:px-24" */}
+        <section className=" py-8  md:py-16 bg-white ">   {/** px-4 md:px-28 lg:px-24" */}
             <div className="max-w-full  px-4 md:px-0 md:mx-20 ">
                 {/* Section title */}
-                <h2 className="text-left md:text-center text-3xl md:text-4xl font-bold text-[#181D27] mb-16">
+                <h2 className="text-left md:text-center text-3xl md:text-4xl font-bold text-[#181D27] mb-12 md:mb-16">
                     {t.title[language]}
                 </h2>
 
                 {/* Grid layout */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 ">
                     {testimonials.map((item, idx) => (
                         <div
                             key={idx}

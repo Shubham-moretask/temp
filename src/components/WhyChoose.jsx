@@ -36,7 +36,7 @@ const WhyChoose = () => {
   ];
 
   return (
-    <section className="bg-[#074720] text-white py-16 md:py-16">
+    <section className="bg-[#074720] text-white py-12 md:py-16">
       <div className="max-w-full  px-4 md:px-0 md:mx-20 ">
         {/* Heading */}
         <h2 className="text-center text-3xl md:text-4xl font-bold mb-8 md:mb-12">

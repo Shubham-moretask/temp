@@ -157,7 +157,7 @@ const PrakrityaBetter = () => {
                     {t.title[language]}
                 </h2>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 pt-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 pt-12 md:pt-20">
                     {/* LEFT: product/ingredients card */}
                     <div className="relative  aspect-[4/3] md:aspect-auto bg-white">
                         {/* main composed image */}

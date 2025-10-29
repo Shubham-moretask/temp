@@ -218,10 +218,10 @@ const HowToUse = () => {
   };
 
   return (
-    <section className="bg-white py-10 md:py-14">
+    <section className="bg-white py-8 md:py-16">
       <div className="max-w-full   px-4 md:px-0 md:mx-20 ">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8 md:mb-12">
+        <div className="flex items-center justify-between ">
           <h2 className="text-3xl md:text-4xl font-bold text-[#181D27]">
             {t.title[language]}
           </h2>
@@ -248,7 +248,7 @@ const HowToUse = () => {
         {/* Horizontal scroll section */}
         <div
           ref={scrollerRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory pb-2"
+          className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory  pt-12 md:pt-20"
         >
           {steps.map((s, i) => (
             <article

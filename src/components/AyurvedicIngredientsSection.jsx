@@ -66,10 +66,10 @@ const AyurvedicIngredientsSection = () => {
   ]
 
   return (
-    <section className="py-16 bg-[#F9F6F1]">
+    <section className="pt-8 md:py-16 bg-[#F9F6F1]">
       <div className="max-w-full mx-auto px-4 md:px-0 md:mx-20  ">
         {/* Section Header */}
-        <div className="text-left  mb-16">
+        <div className="text-left mb-8 md:mb-16">
           <h2 className="text-4xl md:t4xt-5xl font-bold text-gray-900 ">
             {t.title[language]}
           </h2>
@@ -78,7 +78,7 @@ const AyurvedicIngredientsSection = () => {
 
         {/* Ingredients Grid - 3 items per row */}
         <div className="">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 justify-items-center">
           {ingredients.map((ingredient, index) => (
             <div
               key={index}
