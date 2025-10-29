@@ -199,9 +199,9 @@ const TrustAyurvedaSection = () => {
   };
 
   return (
-    <section className="relative max-w-full min-h-[600px] md:min-h-[500px] bg-[#1E1E1E] overflow-hidden mt-8 md:mt-0">
+    <section className="relative max-w-full min-h-[600px] md:min-h-[500px] bg-[#1E1E1E] overflow-hidden ">
       {/* Background Video - Positioned to the right on desktop, bottom on mobile */}
-      <div className="absolute bottom-0 left-0 right-0 h-[60%] md:inset-0 md:left-64 md:h-full">
+      <div className="absolute bottom-0 left-0 right-0 h-[60%] md:inset-0 md:left-64 md:h-full ">
         <video
           autoPlay
           muted
