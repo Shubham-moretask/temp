@@ -44,7 +44,7 @@ const WhyChoose = () => {
         </h2>
 
         {/* Mobile Horizontal Scroll */}
-        <div className="flex overflow-x-auto gap-6 pb-4 sm:hidden scrollbar-hide snap-x snap-mandatory">
+        <div className="flex overflow-x-auto gap-8 pb-4 sm:hidden scrollbar-hide snap-x snap-mandatory">
           {items.map((item, i) => (
             <article key={i} className="flex flex-col flex-shrink-0 w-72 snap-center">
               {/* Image */}

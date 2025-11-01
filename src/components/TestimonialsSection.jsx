@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
                 </h2>
 
                 {/* Grid layout */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-8 gap-y-8 "> 
                     {testimonials.map((item, idx) => (
                         <div
                             key={idx}

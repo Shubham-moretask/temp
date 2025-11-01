@@ -70,7 +70,7 @@ const AyurvedicIngredientsSection = () => {
       <div className="max-w-full mx-auto px-4 md:px-0 md:mx-20  ">
         {/* Section Header */}
         <div className="text-left mb-8 md:mb-16">
-          <h2 className=" text-3xl md:text-4xl md:t4xt-5xl font-bold text-gray-900 ">
+          <h2 className=" text-3xl md:text-4xl  font-bold text-gray-900 ">
             {t.title[language]}
           </h2>
          

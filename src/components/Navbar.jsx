@@ -23,7 +23,13 @@ const Navbar = () => {
       {/* Top Banner with Phone Number */}
       <div className="bg-[#074720] text-white text-center py-1">
         <p className="text-sm font-normal">
-          {t.callText[language]}  <span className='underline'>{t.phoneNumber[language]}</span>
+          {t.callText[language]}  
+          <a 
+            href="tel:+919810431272" 
+            className="underline hover:text-gray-200 transition-colors"
+          >
+            {t.phoneNumber[language]}
+          </a>
         </p>
       </div>
 
