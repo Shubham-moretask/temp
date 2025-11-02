@@ -163,8 +163,8 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../utils/translations';
-import heroBackground from '../assets/bg.png';
-import mobileBackground from '../assets/Mobile-bg.png';
+import heroBackground from '../assets/bg.webp';
+import mobileBackground from '../assets/Mob.webp';
 import productImage from '../assets/Medicine.png';
 
 const HeroSection = () => {
